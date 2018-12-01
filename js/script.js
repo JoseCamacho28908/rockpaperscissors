@@ -35,14 +35,14 @@ while (option !== "Rock" && option!=="Paper" && option!== "Scissors"){
 }  
   
   if (option === "Rock" && randomChoice === "Scissors" ) {
-    $("#winner").html("You win! :)");
+    $("#winner").html("You win! :) ");
 } 
   else if (option === "Scissors" && randomChoice === "Paper"){
-    $("#winner").html("You win! :)");
+    $("#winner").html("You win! :) ");
 }
 
   else if (option === "Paper" && randomChoice === "Rock"){
-    $("#winner").html("You win! :)");
+    $("#winner").html("You win! :) ");
 }
   else if (option === "Paper" && randomChoice === "Paper"){
     $("#winner").html("It's a draw");
@@ -58,18 +58,15 @@ while (option !== "Rock" && option!=="Paper" && option!== "Scissors"){
 }
 
 
-if ($("#winner").html() === "You win! :)"){
-  UserScore+=1;
-}
-else {
-  $("#winner").html() === ( "You lose! :(" );
-  ComputerScore+=1;
-}
-
 });
  
 
-
-    
+if ($("#winner").html() === "You win! :) "){
+  UserScore+=1;
+}
+else {
+  $("#winner").html() === ( "You lose! :( " );
+  ComputerScore+=1;
+}
     
 
