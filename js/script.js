@@ -8,19 +8,17 @@
 
 
 // DOCUMENT READY FUNCTION BELOW
+var UserScore = 0;
+var ComputerScore=0;
+
+$("#userScore").html(UserScore);
+$("#computerScore").html(ComputerScore);
 
 $("#shoot").click(function(){
     $("#userChoice").text($("#input").val());
 });
 
-
-
-var rps = ["rock", "paper", "scissors"];
-
-
-
-
-
+var rps = ["Rock", "Paper", "Scissors"];
 
 $("#shoot").click(function(){
     
@@ -31,34 +29,47 @@ var randomChoice = rps [Math.floor(Math.random() * rps.length)];
   var option = $("#input").val();
   $("#computerChoice").show(randomChoice);
   
-  if (option === "rock" && randomChoice === "scissors" ) {
-    $("#winner").html("You wins! :)");
+while (option !== "Rock" && option!=="Paper" && option!== "Scissors"){
+  alert("Please type Rock, Paper, or Scissors");
+  return false;
+}  
+  
+  if (option === "Rock" && randomChoice === "Scissors" ) {
+    $("#winner").html("You win! :)");
 } 
-  else if (option === "scissors" && randomChoice === "paper"){
+  else if (option === "Scissors" && randomChoice === "Paper"){
     $("#winner").html("You win! :)");
 }
 
-  else if (option === "paper" && randomChoice === "rock"){
+  else if (option === "Paper" && randomChoice === "Rock"){
     $("#winner").html("You win! :)");
 }
-  else if (option === "paper" && randomChoice === "paper"){
+  else if (option === "Paper" && randomChoice === "Paper"){
     $("#winner").html("It's a draw");
 }
-  else if (option === "rock" && randomChoice === "rock"){
+  else if (option === "Rock" && randomChoice === "Rock"){
     $("#winner").html("It's a draw");
 }
-  else if (option === "scizzors" && randomChoice === "scizzors"){
+  else if (option === "Scizzors" && randomChoice === "Scizzors"){
     $("#winner").html("It's a draw");
 }
   else{
-    $("#winner").html("You lose! :(");  
-  }
+    $("#winner").html("You lose! :( ");  
+}
+
+
+if ($("#winner").html() === "You win! :)"){
+  UserScore+=1;
+}
+else {
+  $("#winner").html() === ( "You lose! :(" );
+  ComputerScore+=1;
+}
+
 });
  
 
-    
 
-    
     
     
 

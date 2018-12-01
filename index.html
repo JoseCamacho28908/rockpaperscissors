@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Rock Paper Scizzors Game</title>
+  <title>Rock Paper Scissors Game</title>
   <!-- Link CSS here -->
   <link type='text/css' rel='stylesheet' href='css/style.css' />
 </head>
@@ -21,25 +21,28 @@
   <div class="row">
     
       <h1>Rock Paper Scissors</h1>
-      <p>Directions: You will have to face the best Rock Paper Scissors player. Are you up for the challenge? Type "Rock, Paper, Scissors" then click the button to see who is the best player. May the best player win!  </p>
+      <p>Directions: You will have to face the best Rock Paper Scissors player. Are you up for the challenge? Type "Rock", "Paper", or "Scissors" then click the button to see who will win. May the best player win!  </p>
       <img src="http://www.coltnews.com/wp-content/uploads/2016/04/RPS.png">
 
       <h3>Please Submit Your Choice Below</h3>
       <div>
-        <input id="input">
+        <input placeholder= "Type Rock, Paper, or Scissors" id="input">
         <button id="shoot">Shoot!</button>
       </div>
 
       <div id="choices" class="row">
         <div>
           <h4>User Choice</h4>
+          <p id="userScore"></p>
           <p id="userChoice"></p>
         </div>
         <div>
           <h4>Computer Choice</h4>
+          <p id="computerScore"></p>
           <p id="computerChoice"></p>
         </div>
       </div>
+      
       <div id="result">
         
         <p id="winner"></p>
