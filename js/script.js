@@ -32,6 +32,7 @@ var randomChoice = rps [Math.floor(Math.random() * rps.length)];
 while (option !== "Rock" && option!=="Paper" && option!== "Scissors"){
   alert("Please type Rock, Paper, or Scissors");
   return false;
+ 
 }  
   
   if (option === "Rock" && randomChoice === "Scissors" ) {
@@ -57,16 +58,16 @@ while (option !== "Rock" && option!=="Paper" && option!== "Scissors"){
     $("#winner").html("You lose! :( ");  
 }
 
-
-});
- 
-
-if ($("#winner").html() === "You win! :) "){
+if ($("#winner").html() === "You win! :)"){
   UserScore+=1;
 }
-else {
-  $("#winner").html() === ( "You lose! :( " );
+else if ($("#winner").html() === "It's a draw"){
+  UserScore+=1; 
   ComputerScore+=1;
 }
-    
-
+else {
+ComputerScore+=1;
+}
+$("#userScore").html(UserScore);
+$("#computerScore").html(ComputerScore);
+});
