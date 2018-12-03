@@ -8,8 +8,8 @@
 </head>
 
 <body>
-   
-    
+
+
   <!-- TASK 1: In the div below. 
         1. In a header tag, add a title.
         2. In a paragraph tag, add instructions on how to play the game.
@@ -19,34 +19,34 @@
         6. Add a div to record the Winner.
      -->
   <div class="row">
-    
-      <h1>Rock Paper Scissors</h1>
-      <p>Directions: You will have to face the best Rock Paper Scissors player. Are you up for the challenge? Type "Rock", "Paper", or "Scissors" then click the button to see who will win. May the best player win!  </p>
-      <img src="http://www.coltnews.com/wp-content/uploads/2016/04/RPS.png">
 
-      <h3>Please Submit Your Choice Below</h3>
+    <h1>Rock Paper Scissors</h1>
+    <p>Directions: You will have to face the best Rock Paper Scissors player. Are you up for the challenge? Type "Rock", "Paper", or "Scissors" then click the button to see who will win. May the best player win! </p>
+    <img src="http://www.coltnews.com/wp-content/uploads/2016/04/RPS.png">
+
+    <h3>Please Submit Your Choice Below</h3>
+    <div>
+      <input placeholder="Type Rock, Paper, or Scissors" id="input">
+      <button id="shoot">Shoot!</button>
+    </div>
+
+    <div id="choices" class="row">
       <div>
-        <input placeholder= "Type Rock, Paper, or Scissors" id="input">
-        <button id="shoot">Shoot!</button>
+        <h4>User Choice</h4>
+        <p id="userScore"></p>
+        <p id="userChoice"></p>
       </div>
+      <div>
+        <h4>Computer Choice</h4>
+        <p id="computerScore"></p>
+        <p id="computerChoice"></p>
+      </div>
+    </div>
 
-      <div id="choices" class="row">
-        <div>
-          <h4>User Choice</h4>
-          <p id="userScore"></p>
-          <p id="userChoice"></p>
-        </div>
-        <div>
-          <h4>Computer Choice</h4>
-          <p id="computerScore"></p>
-          <p id="computerChoice"></p>
-        </div>
-      </div>
-      
-      <div id="result">
-        
-        <p id="winner"></p>
-      </div>
+    <div id="result">
+
+      <p id="winner"></p>
+    </div>
   </div>
 
   <!-- Link JQuery here -->
